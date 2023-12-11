@@ -20,22 +20,19 @@ int	*ft_range(int min, int max)
 	{
 		return (NULL);
 	}
-	else
+	arr = (int *)malloc(sizeof(int) * (max - min));
+	if (!arr)
 	{
-		arr = (int *)malloc(sizeof(int) * (max - min));
-		if (!arr)
-		{
-			return (NULL);
-		}
-		i = 0;
-		while (min < max)
-		{
-			arr[i] = min;
-			min++;
-			i++;
-		}
-		return (arr);
+		return (NULL);
 	}
+	i = 0;
+	while (min < max)
+	{
+		arr[i] = min;
+		min++;
+		i++;
+	}
+	return (arr);
 }
 /*
 #include <stdio.h>
@@ -47,7 +44,7 @@ int	main(void)
 	i = 0;
 	if (arr)
 	{
-		while(arr[i])
+		while(i < 20)
 		{
 			printf("%d\n", arr[i]);
 			i++;
@@ -58,4 +55,4 @@ int	main(void)
 	{
 		printf("The min has to be less than max");
 	}
-}*/
+} */

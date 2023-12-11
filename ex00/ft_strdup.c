@@ -16,7 +16,7 @@ int	ft_strlen(char *str)
 	int i;
 
 	i = 0;
-	while (int[i])
+	while (str[i])
 	{
 		i++;
 	}
@@ -41,13 +41,17 @@ char	*ft_strdup(char *src)
 {
 	char	*dup;
 
-	dup = malloc(ft_strlen(src) + 1);
+	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	dup = ft_strcpy(dup, src);
-	free(dup);
 	return (dup);
 }
-
+/*
+#include <stdio.h>
 int	main(void)
 {
+	char *str;
 
-}
+	str = ft_strdup("hello uytfyrc7tesr 875fyu uyr u00 0");
+	printf("%s\n", str);
+	free(str);
+} */
